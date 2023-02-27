@@ -1,4 +1,13 @@
 - hosts: all
   become: true
+  vars:
+    kubernetes_version: '1.26'
+    kubernetes_version_rhel_package: '1.26.1'
+    kubernetes_allow_pods_on_control_plane: true
+    helm_version: 'v3.11.1'
   roles:
     - geerlingguy.clamav
+    - geerlingguy.docker
+    - geerlingguy.kubernetes
+    - geerlingguy.helm
+    
