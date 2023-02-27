@@ -1,4 +1,4 @@
-- hosts: all
+- hosts: localhost
   become: true
   vars:
     kubernetes_version: '1.26'
